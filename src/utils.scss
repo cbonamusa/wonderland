@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Shippori+Mincho+B1:wght@400;500;600;700&display=swap');
+
+
+
+/* COLORS */
+$main-dark: #191919;
+$dark: #4a4a4a;
+$main-light:#FFF0E9;
+$glow-blue: #c3f7f8;
+$glow-pink:#ffcfe0;
+
+
+/* FONTS */
+$text-font: 'Shippori Mincho B1', serif;
+$title-font:'Lobster', cursive;
+$subtitle: 'Redressed', cursive;
+$sans-serif: 'Raleway', sans-serif;
+
+/* SIZING */
+$medianil: 16px;
+
+/* MEDIA */
+$mobile-max: 767px;
+
+
+@keyframes fadeOut {
+    from {opacity: 1;}  to {opacity: 0;}
+}
+
+@mixin for-phone-landscape-up {
+    @media (min-width: $mobile-max) {
+        @content;
+    }
+}
+
+@mixin for-phone-landscape-down {
+    @media (max-width: $mobile-max) {
+        @content;
+    }
+}

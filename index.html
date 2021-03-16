@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderland</title>
+    <link rel="icon" type="image/gif" href="/assets/drinkme_02.png">
+    <link rel="stylesheet" href="src/main.css" />
+</head>
+
+<body>
+    <header class="wonderland">
+        <nav>
+            <ul>
+                <li><a href="#drinkMe">Drink me</a></li>
+                <li><a href="#time">Out of time</a></li>
+                <li><a href="#tea">Tea time</a></li>
+                <li><a href="#mad">We're all mad here</a></li>
+            </ul>
+        </nav>
+        <div class="wonderland-main">
+            <h1 class="title" contenteditable="true">Wonderland</h1>
+            <img class="img" src="assets/bg01.jpg" />
+        </div>
+        <div class="wonderland-quote">
+            <h4 class="text"><em>
+    &#10077; &#10023; Would you tell me, please, which way I ought to go from here?
+                     &#9828; That depends a good deal on where you want to get to.
+                                                                &#10023; I don't much care where –
+         &#9828;Then it doesn't matter which way you go. &#10078;
+            </em></h4>
+        </div>
+    </header>
+
+    <main>
+        <section  class="section-drink">
+            <div class="section-drink-header">
+                <h2>Drink Me! not... </h2>
+                <h4 class="quote"><em>“I suppose I ought to eat or drink something or other; but the great question is ‘What?’”</em></h4>
+            </div>
+            <div class="section-drink-content">
+                <div class="colorfill">
+                    <ul>
+                        <li>With <strong>Red</strong> you will grow and grow</li>
+                        <li><strong>Blue</strong> will make you smaller </li>
+                        <li><strong>Yellow</strong> will make you dance </li>
+                        <li><strong>Purple</strong> makes nothing </li>
+                    </ul>
+                    <div class="bottle-label">
+                        <p><em>Click the bottle</em> and choose whatever is your color</p>
+                        <div id="clickToChangeColor" class="bottle">
+                            <img src="assets/bottle.png" width="155" />
+                            <svg id="liquidBottleColor" data-name="Capa 2" width="155" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 505.02 503.56"><defs></defs><path class="cls-1" d="M12.9,80.19s93,59.5,240,57.5,264-57.5,264-57.5l-6,366s-70,81-244,78-243.5-68.19-245-72S12.9,80.19,12.9,80.19Z" transform="translate(-11.88 -20.71)"/><path class="cls-1" d="M11.88,74.74c0-7.13,85.79-54.2,238.77-54S514.88,66,515.88,73.24,408.73,133.71,252.65,135,11.84,81.87,11.88,74.74Z" transform="translate(-11.88 -20.71)"/></svg>        
+                        </div>
+                    </div>
+                    <div class="colorfill-buttons">
+                        <button id="drinkIt">Drink me!</button>
+                        <button id="fillIt">Fill me again!</button> 
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="section-time">
+            <img class="section-time-img" src="assets/rabbit.jpg"/>
+            <div id="time" class="section-time-header">
+                <h2>Out of time</h2>
+                <h4><em>&#10077;  I'm late, I'm late! For a very important date! No time to say 'hello, goodbye,' I'm late, I'm late, I'm late! &#10078;</em></h4>
+            </div>
+            <div class="clock">
+                <img id="hours" src="assets/hours.png"/>
+                <img id="minutes" src="assets/minutes.png"/>
+            </div>
+        </section>
+    
+        <section id="tea" class="section-tea">
+            <div class="section-tea-header">
+                <h2>Lets have a cup of Tea</h2>
+                <h4><em>	
+                    &#10077;    &#9828; Would you like a little more tea?  	
+                                           &#10023; Well, I haven't had any yet, so I can't very well take more.	
+                            &#9828; Ah, you mean you can't very well take less. 
+                                                                &#9828; Yes. You can always take more than nothing.   &#10078;</em></h4>
+            </div>
+           <article>
+                <form id="form" action="" method="GET">
+                    <h4>Book your Tea Time</h4>
+                    <label> 
+                        <p>Who are you?</p>
+                        <input type="text" name="name" id="name" required placeholder="Name, please?">
+                    </label>
+                    <label>
+                        <p>When do you wanna have your tea?</p>
+                        <input type="date" name="date" id="date" required value="">
+                    </label>
+                    <p>Wich tea type do you prefer?</p>
+                    <select name="teaType" id="teaType" required aria-placeholder="Choose your tea">
+                        <option value="">Choose your tea</option>
+                        <option value="black">Black tea</option>
+                        <option value="green">Green tea</option>
+                        <option value="chai">Chai tea</option>
+                        <option value="white">White tea</option>
+                    </select>
+    
+                    <p>Would you want some milk?</p>
+                    <label for="withMilk"><input id="withMilk" type="radio" value="with" name="milk"> Yes </label>
+                    <label for="withoutMilk"> <input id="withoutMilk" type="radio" value="without" name="milk"> No </label>
+    
+                    <input class="submit" value="Book it" id="formBtn">
+                </form>
+                <div id="teaReservation"></div>
+            </article>
+            <img class="tea01" src="assets/asset01.png"/>
+            <img class="tea02" src="assets/asset02.png"/>
+            <img class="tea03" src="assets/asset03.png"/>
+        </section>
+
+        <section id="mad" class="section-mad">
+            <div class="section-mad-header">
+                <h2>We're all mad here</h2>
+            </div>
+            <div class="section-mad-content">
+                <h4><em>
+                    &#10077;  &#9831; In that direction, lives a Hatter; and in that direction, lives a March Hare. Visit either you like; they’re both mad.
+                                &#10023; But I don’t want to go among mad people,
+                        &#9831; Oh, you ca’n’t help that, <strong>we’re all mad here. I’m mad. You’re mad.</strong>
+                                &#10023; How do you know I’m mad?
+                        &#9831; You must be, or you wouldn’t have come here. &#10078;</em>
+                </h4>
+
+                <p class="mad-text">Mad</p>
+                <div class="chess-label">
+                    <p><em>Click the chess squares</em> to reveal what are we all here</p>
+                </div>
+                <table class="chess-table">
+                            <tr>
+                                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                            </tr>
+                            <tr>
+                                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                            </tr>
+                            <tr>
+                                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                            </tr>
+                            <tr>
+                                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                            </tr>
+                            <tr>
+                                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                            </tr>
+                            <tr>
+                                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                            </tr>
+                            <tr>
+                                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                            </tr>
+                            <tr>
+                                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                            </tr>
+                </table>
+            </div>
+            <aside>
+                <img id="chesire" class="chesire" src="assets/chesireSmile.png"/>
+            </aside>
+            <img class="cards" src="assets/img_cards.png"/>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Wonderland:</strong> all the scope for imagination</p>
+        <ul>
+            <li><a href="#drinkMe">Drink me</a></li>
+            <li><a href="#time">Out of time</a></li>
+            <li><a href="#tea">Tea time</a></li>
+            <li><a href="#mad">We're all mad here</a></li>
+        </ul>
+
+    </footer>
+    <script type="module" src="src/main.js"></script> <!-- text/javascript -->
+</body>
+
+</html>

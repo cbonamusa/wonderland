@@ -1,0 +1,562 @@
+
+/* ---------------------- GLOBAL -------------------------- */
+@import 'utils.scss';
+
+body {
+    margin: 0;
+    cursor: help;
+    pre, h1, h2, h3, h4, p, a  {
+        margin: 0;
+        padding: 0;
+    }
+    h2 { 
+        font-family: $subtitle;
+        font-size: $medianil * 3;
+    }
+    h4 {
+        font-family: $text-font;
+        font-weight: 600;
+        font-size: $medianil * 1.25;
+        line-height: 1.68;
+    }
+    img { max-width: 100%;}
+    overflow-x: hidden;
+    max-width: 100%;
+}
+// main { background: $main-dark;}
+
+/* ---------------------- HEADER AND NAVBAR -------------------------- */
+.wonderland {
+    width: 100%;
+    background: $main-dark;
+    nav {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: $medianil * 2 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-end;
+            li {
+                text-align: center;
+                @include for-phone-landscape-down {
+                    &:before {
+                        content: "♠";
+                        padding-right: 1px;
+                        color: $dark;  
+                    }
+                }
+                @include for-phone-landscape-up { 
+                    padding: $medianil;
+                    &:first-child {
+                        transform: rotate(180deg);
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            bottom: 0;
+                            left: 0;
+                            background-color: $dark;
+                            visibility: hidden;
+                            transform: scaleX(0);
+                            transition: all 0.4s ease-in-out 0s;
+                        }
+                        &:hover { 
+                            &::before{
+                                visibility: visible;
+                                transform: scaleX(1);
+                            }
+                        }
+                    }
+                    &:nth-child(2) {
+                        transform: translate(-2px ,29px);
+                        &:hover { animation: fadeOut 1.5s; }
+                    }
+                    &:nth-child(3) {
+                        &:hover { a { 
+                            -webkit-text-fill-color: transparent;
+                            -webkit-text-stroke-color: $main-light;
+                            -webkit-text-stroke-width: .012em; } }
+                    }
+                    &:last-child {
+                        transform: rotate(-22deg) translate(-60px, 2px);       
+                        transition: text-shadow 0.4s ease-in-out; 
+                        &:hover {
+                            text-shadow: 1px 0px 6px $glow-blue;
+                             a {color: black;}
+                        }
+                    }
+                }
+                a {
+                    color: $dark;
+                    font-family: $text-font;
+                    font-size: $medianil;
+                    line-height: 0.2;
+                    font-weight: bolder;
+                    text-decoration: none; 
+                    @include for-phone-landscape-up { font-size: $medianil * 1.2; }
+                }  
+            }
+        }
+    }
+    &-main {
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include for-phone-landscape-up { padding: $medianil * 5;}
+        .title {
+            position: absolute;
+            top: 25%;
+            margin: 0;
+            font-size: 60px;
+            font-family: $title-font;
+            font-weight: 500;
+            color: $main-light;
+            @include for-phone-landscape-down {
+                text-shadow: none;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-color: $glow-blue;
+                -webkit-text-stroke-width: .03em;
+            }
+            @include for-phone-landscape-up { 
+                font-size: $medianil * 6;
+                text-shadow: 3px 1px 3px $glow-blue;
+                top: 30%;      
+            
+        }
+    }
+    img { 
+        @include for-phone-landscape-down { max-width: 60%;}
+    }
+       
+    }
+    &-quote {
+        display: flex;
+        justify-content: center;
+        padding: 5vw;
+        .text {
+            color: $main-light;
+            font-size: $medianil * 1.25;
+            font-family: $text-font;
+            text-align: left;
+            @include for-phone-landscape-up {
+                white-space: pre;
+            }
+        }
+    }
+}
+
+/* ---------------------- SECTION 1: DRINK ME ------------------------- */
+.section-drink {
+    background: linear-gradient(180deg, $main-dark 0%, black 100%);
+    padding: $medianil * 5 $medianil * 2;
+    &-header {
+        padding-bottom: $medianil * 5;
+        h2 {
+            color:  $main-light;
+        }
+        h4 {
+            color: $main-light;
+            font-family: $text-font;
+            font-weight: 400;
+            font-size: $medianil * 1.25;
+            line-height: 1.38;
+        }
+    }
+    &-content {
+        outline: auto;
+        padding: 25px 15px;
+        @include for-phone-landscape-up { padding: 140px 0; }
+        .colorfill {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            @include for-phone-landscape-up { flex-direction: row; }
+            ul {
+                list-style-type: none;
+                padding: 0;
+                li {
+                    letter-spacing: 0.5px;
+                    padding: 0;
+                    margin: 0;
+                    color: $main-light;
+                    font-family: $sans-serif;
+                    line-height: 1.86;
+                    font-size: $medianil;
+                    letter-spacing: 0.8px;
+                    &:before {
+                        content: '♠';
+                        padding-right: 6px;
+                    }
+                }
+            }
+            .bottle-label {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include for-phone-landscape-up {margin-top: -100px; margin-left: -130px; }
+                p {
+                    color: $dark;
+                    width: 50%;
+                    border: 1px solid $dark;
+                    text-align: center;
+                    padding: 5px;
+                    margin-bottom: 20px;
+                    font-size: $medianil * 1.15;
+                    letter-spacing: 0.3px;
+                    em { color: $glow-blue; }
+                    @include for-phone-landscape-up {
+                        margin-bottom: 50px;
+                    }
+                }
+                .bottle {
+                    cursor: pointer;
+                    margin-left: -58%;
+                    @include for-phone-landscape-up {  margin-left: -40%; }
+                    img {
+                        position: absolute;
+                        opacity: 0.7;
+                        z-index: 1;
+                    }
+                    svg {
+                        position: absolute;
+                        margin-top: 78px;
+                        opacity: 0.9;
+                        fill: white;
+                        // @media (max-width: $mobile-max) { top: 132%;}
+                    }
+                }
+
+            }     
+            &-buttons {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                @include for-phone-landscape-up {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                }
+                @include for-phone-landscape-down { margin-top: 260px; }
+                button {
+                    background: $main-dark;
+                    border: 1px solid black;
+                    outline: black;
+                    border-radius: 5px;
+                    padding: 10px 15px;
+                    color: $glow-blue;
+                    transition: all 0.4s ease 0s;
+                    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+                    font-size: $medianil;
+                    font-family: $sans-serif;
+                    cursor: pointer;
+                    &:hover { color: $glow-pink }
+                    &:active {
+                        background: $main-dark;
+                        box-shadow: inset 0px 0px 5px #373737cb;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* ---------------------- SECTION 2: TIME   --------------------------- */
+.section-time {
+    background-image: url('../assets/backgroundTime.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding-bottom: 80px;
+    &-img {
+        margin: auto;
+        display: block;
+    }
+    &-header {
+        margin: 0;
+        padding: $medianil *3 $medianil *4;
+        display: block;
+        background: white;
+        text-align: center;
+        color:  $main-dark;
+
+    }
+    .clock {
+        position: relative;
+        margin: auto;
+        border:1px solid $main-light;
+        width:300px; 
+        height: 300px;
+        margin-top: 80px;
+        border-radius:500px;
+        background:rgba(237, 237, 237, 0.906);
+        @include for-phone-landscape-up {
+            width:500px; 
+            height:500px;
+        }
+        img {
+            position: absolute;
+            top: -70%;
+            left: 40%;
+            z-index: 2;
+            @include for-phone-landscape-up {
+                top: -25%;
+                left: 45%;
+            }
+            &.hours{
+                z-index: 3;
+            }
+        }
+    }
+}
+
+/* ---------------------- SECTION 3: TEA  ----------------------------- */
+.section-tea {
+    background: url('../assets/grayBg.jpg') no-repeat center 4px;
+    height: 100%;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    position: relative;
+    &-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 263px $medianil *2 $medianil;
+        @include for-phone-landscape-up { 
+            padding: $medianil * 4;
+            align-items: flex-end;
+        }
+        h4 {
+            color: $main-dark;
+            text-align: left;
+            @include for-phone-landscape-up {
+                white-space: pre;
+            }
+        }
+    }
+    article {
+        padding: 20px;
+        form {
+            margin: atuo;
+            font-family: $sans-serif;
+            background: white;
+            border-radius: 7px;
+            padding: $medianil;
+            box-shadow: 4px 3px 2px 0px #0000005d;
+            border: 2px solid $dark;
+            margin-bottom: 20px;
+            z-index: 5;
+            @include for-phone-landscape-up { 
+                position: absolute;
+                width: 35%;
+                right: $medianil * 12;
+            }
+            h4 {
+                font-family: $subtitle;
+                text-align: center;
+                font-size: $medianil *2;
+            }
+            p {
+                margin-bottom: 10px;
+                font-weight: 600;
+            }
+            select, input:not([type="radio"]){
+                padding: 6px 8px;
+                margin-bottom: $medianil;
+                border: 3px solid $glow-blue;
+                border-radius: 5px;
+                width: 92%;
+            }
+            select { width: 97%;}
+            input[class="submit"] {
+                margin-top: $medianil*2;
+                background: $main-dark;
+                border: 1px solid black;
+                outline: black;
+                text-align: center;
+                border-radius: 5px;
+                color: $glow-blue;
+                transition: all 0.4s ease 0s;
+                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
+                border: 2px solid $glow-blue;
+                font-size: $medianil*1.2;
+                font-family: $sans-serif;
+                font-weight: bold;
+                cursor: pointer;
+                &:active {
+                    background: $main-dark;
+                    box-shadow: inset 0px 0px 1px #373737cb;
+                    outline: none;
+                }
+            }
+        }
+        #teaReservation div {
+            width: 70%;
+            padding: 20px;
+            margin: auto;
+            vertical-align: center;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.774);
+            z-index: 4;
+            &.completed { border: 3px solid $glow-blue;}
+            &.uncompleted { border: 3px solid $glow-pink;}
+            @include for-phone-landscape-up { 
+                top: 40%;
+                width: 30%;
+                position: absolute;
+                margin: 30px;
+            }
+            h4 {
+                font-family: $subtitle;
+                color: $main-dark;
+                font-size: $medianil *3;
+                margin-bottom: $medianil;
+                line-height: 1;
+            }
+            p {
+                font-size: $medianil;
+                letter-spacing: 1.4;
+                line-height: 1.8;
+                font-family: $sans-serif;
+            }
+        }
+
+    }
+    .tea02 {
+        position: absolute;
+        top: -10%;
+        left: 0px;
+        z-index: 3;
+    }
+    .tea03 {
+        position: absolute;
+        right: 0px;
+    }
+    @include for-phone-landscape-down {
+        .tea01 { margin-top: -210px; width: 20%;}
+    }
+}
+
+/* ---------------------- SECTION 3: MAD  ----------------------------- */
+.section-mad {
+    background:linear-gradient(180deg, black 0%, $main-dark 100%);
+    color: $main-light;
+    position: relative;
+    &-header {
+        display: flex;
+        justify-content: center;
+        padding: $medianil *2 $medianil;
+        @include for-phone-landscape-up { padding: $medianil * 4;}
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        h4 {
+            padding-bottom: $medianil * 3;
+            font-size: $medianil;
+            @include for-phone-landscape-up { white-space: pre;}
+            @include for-phone-landscape-down { padding: $medianil *2 $medianil; }
+        }
+        .mad-text {
+            font-size: $medianil * 10;
+            color: black;
+            text-shadow: 1px 0px 6px $glow-blue;
+            font-family: $title-font;
+            position: absolute;
+            top:44%;
+            @include for-phone-landscape-up { top: 54%;}
+            -webkit-text-fill-color: black;
+            -webkit-text-stroke-color: $glow-blue;
+            -webkit-text-stroke-width: .015em;
+        }
+        .chess-label {
+            padding: 5px;
+            text-align: center;
+            width: 50%;
+            border: 1px solid $dark;
+            margin-bottom: 20px;
+            @include for-phone-landscape-up {
+                width: 10%;
+                height: 10%;
+           }
+            p {
+                color: $dark;
+                font-size: $medianil * 1.15;
+                letter-spacing: 0.3px;
+                em { color: $glow-blue; }
+            
+            }
+        }
+        table {
+            z-index: 1;
+            td { 
+                width: 50px; 
+                height: 50px; 
+                cursor: pointer;
+                
+            }
+            tr:nth-child(even) td:nth-child(odd), 
+            tr:nth-child(odd) td:nth-child(even) {
+                background: $main-light;
+               
+            }
+        }
+    }
+    aside {
+        position: absolute;
+        top: 30%;
+        right: 0;
+        .chesire {
+            max-width: 90%;
+            opacity: 0;
+            transition: all ease 0.65s;
+            @include for-phone-landscape-down {display: none;}
+            &.active {
+                opacity: 0.8;
+                transition: all ease 0.65s;
+            }
+        }
+
+
+    }
+    .cards {
+        margin-top: -13%;
+        opacity: 0.8;
+        margin-bottom: $medianil * 2;
+    }
+}
+
+/* ---------------------------- FOOTER -------------------------------- */
+footer {
+    background:  linear-gradient(180deg, black 0%, $main-dark 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $medianil;
+    box-shadow: 1px 2px 2px $glow-blue;
+    font-size: 12px;  
+    font-family: $sans-serif;  
+    color: $glow-blue; 
+    ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        li a {
+            text-decoration: none;
+            color: $glow-blue;
+            padding-right: $medianil * 2;
+            &:hover {color: $glow-pink}
+
+        }
+    }
+}
