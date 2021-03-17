@@ -1,1 +1,6 @@
-{}
+{
+  "devDependencies": {
+    "snowpack": "^3.0.13",
+    "snowpack-sass-compiler": "^1.0.6"
+  }
+}
