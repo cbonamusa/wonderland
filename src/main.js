@@ -80,5 +80,4 @@ evListener(getElemId('formBtn'), 'click', function() {
       <p>Please, <strong>complete the form</strong> to proceed with your reservation</p>
     </div>`
   }
-
-})
+});
