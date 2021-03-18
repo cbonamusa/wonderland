@@ -1,4 +1,7 @@
 # wonderland
 Single page site
-
-$npx snowpack dev
+```
+$ npx snowpack dev
+$ npm start
+$ npm run build
+``` 

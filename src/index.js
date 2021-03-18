@@ -1,3 +1,5 @@
+import "./main.scss";
+
 /* Functions */
 let getElemId = (element) => document.getElementById(element);
 let getElQS = (element) => document.querySelectorAll(element);

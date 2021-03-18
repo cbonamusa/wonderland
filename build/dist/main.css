@@ -1,0 +1,656 @@
+@charset "UTF-8";
+/* ---------------------- GLOBAL -------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Shippori+Mincho+B1:wght@400;500;600;700&display=swap");
+/* COLORS */
+/* FONTS */
+/* SIZING */
+/* MEDIA */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+body {
+  margin: 0;
+  cursor: help;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+body pre, body h1, body h2, body h3, body h4, body p, body a {
+  margin: 0;
+  padding: 0;
+}
+body h2 {
+  font-family: "Redressed", cursive;
+  font-size: 48px;
+}
+body h4 {
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.68;
+}
+body img {
+  max-width: 100%;
+}
+
+/* ---------------------- HEADER AND NAVBAR -------------------------- */
+.wonderland {
+  width: 100%;
+  background: #191919;
+}
+.wonderland nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 32px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.wonderland nav ul li {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .wonderland nav ul li:before {
+    content: "♠";
+    padding-right: 1px;
+    color: #4a4a4a;
+  }
+}
+@media (min-width: 767px) {
+  .wonderland nav ul li {
+    padding: 16px;
+  }
+  .wonderland nav ul li:first-child {
+    transform: rotate(180deg);
+  }
+  .wonderland nav ul li:first-child::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4a4a4a;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.4s ease-in-out 0s;
+  }
+  .wonderland nav ul li:first-child:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  .wonderland nav ul li:nth-child(2) {
+    transform: translate(-2px, 29px);
+  }
+  .wonderland nav ul li:nth-child(2):hover {
+    animation: fadeOut 1.5s;
+  }
+  .wonderland nav ul li:nth-child(3):hover a {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #FFF0E9;
+    -webkit-text-stroke-width: 0.012em;
+  }
+  .wonderland nav ul li:last-child {
+    transform: rotate(-22deg) translate(-60px, 2px);
+    transition: text-shadow 0.4s ease-in-out;
+  }
+  .wonderland nav ul li:last-child:hover {
+    text-shadow: 1px 0px 6px #c3f7f8;
+  }
+  .wonderland nav ul li:last-child:hover a {
+    color: black;
+  }
+}
+.wonderland nav ul li a {
+  color: #4a4a4a;
+  font-family: "Shippori Mincho B1", serif;
+  font-size: 16px;
+  line-height: 0.2;
+  font-weight: bolder;
+  text-decoration: none;
+}
+@media (min-width: 767px) {
+  .wonderland nav ul li a {
+    font-size: 19.2px;
+  }
+}
+.wonderland-main {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 767px) {
+  .wonderland-main {
+    padding: 80px;
+  }
+}
+.wonderland-main .title {
+  position: absolute;
+  top: 25%;
+  margin: 0;
+  font-size: 60px;
+  font-family: "Lobster", cursive;
+  font-weight: 500;
+  color: #FFF0E9;
+}
+@media (max-width: 767px) {
+  .wonderland-main .title {
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #c3f7f8;
+    -webkit-text-stroke-width: 0.03em;
+  }
+}
+@media (min-width: 767px) {
+  .wonderland-main .title {
+    font-size: 96px;
+    text-shadow: 3px 1px 3px #c3f7f8;
+    top: 30%;
+  }
+}
+@media (max-width: 767px) {
+  .wonderland-main img {
+    max-width: 60%;
+  }
+}
+.wonderland-quote {
+  display: flex;
+  justify-content: center;
+  padding: 5vw;
+}
+.wonderland-quote .text {
+  color: #FFF0E9;
+  font-size: 20px;
+  font-family: "Shippori Mincho B1", serif;
+  text-align: left;
+}
+@media (min-width: 767px) {
+  .wonderland-quote .text {
+    white-space: pre;
+  }
+}
+
+/* ---------------------- SECTION 1: DRINK ME ------------------------- */
+.section-drink {
+  background: linear-gradient(180deg, #191919 0%, black 100%);
+  padding: 80px 32px;
+}
+.section-drink-header {
+  padding-bottom: 80px;
+}
+.section-drink-header h2 {
+  color: #FFF0E9;
+}
+.section-drink-header h4 {
+  color: #FFF0E9;
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.38;
+}
+.section-drink-content {
+  outline: auto;
+  padding: 25px 15px;
+}
+@media (min-width: 767px) {
+  .section-drink-content {
+    padding: 140px 0;
+  }
+}
+.section-drink-content .colorfill {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@media (min-width: 767px) {
+  .section-drink-content .colorfill {
+    flex-direction: row;
+  }
+}
+.section-drink-content .colorfill ul {
+  list-style-type: none;
+  padding: 0;
+}
+.section-drink-content .colorfill ul li {
+  letter-spacing: 0.5px;
+  padding: 0;
+  margin: 0;
+  color: #FFF0E9;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.86;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+}
+.section-drink-content .colorfill ul li:before {
+  content: "♠";
+  padding-right: 6px;
+}
+.section-drink-content .colorfill .bottle-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 767px) {
+  .section-drink-content .colorfill .bottle-label {
+    margin-top: -100px;
+    margin-left: -130px;
+  }
+}
+.section-drink-content .colorfill .bottle-label p {
+  color: #4a4a4a;
+  width: 50%;
+  border: 1px solid #4a4a4a;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 18.4px;
+  letter-spacing: 0.3px;
+}
+.section-drink-content .colorfill .bottle-label p em {
+  color: #c3f7f8;
+}
+@media (min-width: 767px) {
+  .section-drink-content .colorfill .bottle-label p {
+    margin-bottom: 50px;
+  }
+}
+.section-drink-content .colorfill .bottle-label .bottle {
+  cursor: pointer;
+  margin-left: -58%;
+}
+@media (min-width: 767px) {
+  .section-drink-content .colorfill .bottle-label .bottle {
+    margin-left: -40%;
+  }
+}
+.section-drink-content .colorfill .bottle-label .bottle img {
+  position: absolute;
+  opacity: 0.7;
+  z-index: 1;
+}
+.section-drink-content .colorfill .bottle-label .bottle svg {
+  position: absolute;
+  margin-top: 78px;
+  opacity: 0.9;
+  fill: white;
+}
+.section-drink-content .colorfill-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media (min-width: 767px) {
+  .section-drink-content .colorfill-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 767px) {
+  .section-drink-content .colorfill-buttons {
+    margin-top: 260px;
+  }
+}
+.section-drink-content .colorfill-buttons button {
+  background: #191919;
+  border: 1px solid black;
+  outline: black;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #c3f7f8;
+  transition: all 0.4s ease 0s;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+}
+.section-drink-content .colorfill-buttons button:hover {
+  color: #ffcfe0;
+}
+.section-drink-content .colorfill-buttons button:active {
+  background: #191919;
+  box-shadow: inset 0px 0px 5px #373737cb;
+  outline: none;
+}
+
+/* ---------------------- SECTION 2: TIME   --------------------------- */
+.section-time {
+  background-image: url("../assets/backgroundTime.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding-bottom: 80px;
+}
+.section-time-img {
+  margin: auto;
+  display: block;
+}
+.section-time-header {
+  margin: 0;
+  padding: 48px 64px;
+  display: block;
+  background: white;
+  text-align: center;
+  color: #191919;
+}
+.section-time .clock {
+  position: relative;
+  margin: auto;
+  border: 1px solid #FFF0E9;
+  width: 300px;
+  height: 300px;
+  margin-top: 80px;
+  border-radius: 500px;
+  background: rgba(237, 237, 237, 0.906);
+}
+@media (min-width: 767px) {
+  .section-time .clock {
+    width: 500px;
+    height: 500px;
+  }
+}
+.section-time .clock img {
+  position: absolute;
+  top: -70%;
+  left: 40%;
+  z-index: 2;
+}
+@media (min-width: 767px) {
+  .section-time .clock img {
+    top: -25%;
+    left: 45%;
+  }
+}
+.section-time .clock img.hours {
+  z-index: 3;
+}
+
+/* ---------------------- SECTION 3: TEA  ----------------------------- */
+.section-tea {
+  background: url("../assets/grayBg.jpg") no-repeat center 4px;
+  height: 100%;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  position: relative;
+}
+.section-tea-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 263px 32px 16px;
+}
+@media (min-width: 767px) {
+  .section-tea-header {
+    padding: 64px;
+    align-items: flex-end;
+  }
+}
+.section-tea-header h4 {
+  color: #191919;
+  text-align: left;
+}
+@media (min-width: 767px) {
+  .section-tea-header h4 {
+    white-space: pre;
+  }
+}
+.section-tea article {
+  padding: 20px;
+}
+.section-tea article form {
+  margin: atuo;
+  font-family: "Raleway", sans-serif;
+  background: white;
+  border-radius: 7px;
+  padding: 16px;
+  box-shadow: 4px 3px 2px 0px #0000005d;
+  border: 2px solid #4a4a4a;
+  margin-bottom: 20px;
+  z-index: 5;
+}
+@media (min-width: 767px) {
+  .section-tea article form {
+    position: absolute;
+    width: 35%;
+    right: 192px;
+  }
+}
+.section-tea article form h4 {
+  font-family: "Redressed", cursive;
+  text-align: center;
+  font-size: 32px;
+}
+.section-tea article form p {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.section-tea article form select, .section-tea article form input:not([type=radio]) {
+  padding: 6px 8px;
+  margin-bottom: 16px;
+  border: 3px solid #c3f7f8;
+  border-radius: 5px;
+  width: 92%;
+}
+.section-tea article form select {
+  width: 97%;
+}
+.section-tea article form input[class=submit] {
+  margin-top: 32px;
+  background: #191919;
+  border: 1px solid black;
+  outline: black;
+  text-align: center;
+  border-radius: 5px;
+  color: #c3f7f8;
+  transition: all 0.4s ease 0s;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
+  border: 2px solid #c3f7f8;
+  font-size: 19.2px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+.section-tea article form input[class=submit]:active {
+  background: #191919;
+  box-shadow: inset 0px 0px 1px #373737cb;
+  outline: none;
+}
+.section-tea article #teaReservation div {
+  width: 70%;
+  padding: 20px;
+  margin: auto;
+  vertical-align: center;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.774);
+  z-index: 4;
+}
+.section-tea article #teaReservation div.completed {
+  border: 3px solid #c3f7f8;
+}
+.section-tea article #teaReservation div.uncompleted {
+  border: 3px solid #ffcfe0;
+}
+@media (min-width: 767px) {
+  .section-tea article #teaReservation div {
+    top: 40%;
+    width: 30%;
+    position: absolute;
+    margin: 30px;
+  }
+}
+.section-tea article #teaReservation div h4 {
+  font-family: "Redressed", cursive;
+  color: #191919;
+  font-size: 48px;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+.section-tea article #teaReservation div p {
+  font-size: 16px;
+  letter-spacing: 1.4;
+  line-height: 1.8;
+  font-family: "Raleway", sans-serif;
+}
+.section-tea .tea02 {
+  position: absolute;
+  top: -10%;
+  left: 0px;
+  z-index: 3;
+}
+.section-tea .tea03 {
+  position: absolute;
+  right: 0px;
+}
+@media (max-width: 767px) {
+  .section-tea .tea01 {
+    margin-top: -210px;
+    width: 20%;
+  }
+}
+
+/* ---------------------- SECTION 3: MAD  ----------------------------- */
+.section-mad {
+  background: linear-gradient(180deg, black 0%, #191919 100%);
+  color: #FFF0E9;
+  position: relative;
+}
+.section-mad-header {
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+}
+@media (min-width: 767px) {
+  .section-mad-header {
+    padding: 64px;
+  }
+}
+.section-mad-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.section-mad-content h4 {
+  padding-bottom: 48px;
+  font-size: 16px;
+}
+@media (min-width: 767px) {
+  .section-mad-content h4 {
+    white-space: pre;
+  }
+}
+@media (max-width: 767px) {
+  .section-mad-content h4 {
+    padding: 32px 16px;
+  }
+}
+.section-mad-content .mad-text {
+  font-size: 160px;
+  color: black;
+  text-shadow: 1px 0px 6px #c3f7f8;
+  font-family: "Lobster", cursive;
+  position: absolute;
+  top: 44%;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-color: #c3f7f8;
+  -webkit-text-stroke-width: 0.015em;
+}
+@media (min-width: 767px) {
+  .section-mad-content .mad-text {
+    top: 54%;
+  }
+}
+.section-mad-content .chess-label {
+  padding: 5px;
+  text-align: center;
+  width: 50%;
+  border: 1px solid #4a4a4a;
+  margin-bottom: 20px;
+}
+@media (min-width: 767px) {
+  .section-mad-content .chess-label {
+    width: 10%;
+    height: 10%;
+  }
+}
+.section-mad-content .chess-label p {
+  color: #4a4a4a;
+  font-size: 18.4px;
+  letter-spacing: 0.3px;
+}
+.section-mad-content .chess-label p em {
+  color: #c3f7f8;
+}
+.section-mad-content table {
+  z-index: 1;
+}
+.section-mad-content table td {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.section-mad-content table tr:nth-child(even) td:nth-child(odd),
+.section-mad-content table tr:nth-child(odd) td:nth-child(even) {
+  background: #FFF0E9;
+}
+.section-mad aside {
+  position: absolute;
+  top: 30%;
+  right: 0;
+}
+.section-mad aside .chesire {
+  max-width: 90%;
+  opacity: 0;
+  transition: all ease 0.65s;
+}
+@media (max-width: 767px) {
+  .section-mad aside .chesire {
+    display: none;
+  }
+}
+.section-mad aside .chesire.active {
+  opacity: 0.8;
+  transition: all ease 0.65s;
+}
+.section-mad .cards {
+  margin-top: -13%;
+  opacity: 0.8;
+  margin-bottom: 32px;
+}
+
+/* ---------------------------- FOOTER -------------------------------- */
+footer {
+  background: linear-gradient(180deg, black 0%, #191919 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  box-shadow: 1px 2px 2px #c3f7f8;
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  color: #c3f7f8;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #c3f7f8;
+  padding-right: 32px;
+}
+footer ul li a:hover {
+  color: #ffcfe0;
+}

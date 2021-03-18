@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Shippori+Mincho+B1:wght@400;500;600;700&display=swap");
+/* COLORS */
+/* FONTS */
+/* SIZING */
+/* MEDIA */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

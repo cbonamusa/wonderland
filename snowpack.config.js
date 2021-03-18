@@ -4,23 +4,20 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    /* ... */
     "src": "/dist",
     "public": "/"
   },
   plugins: [
     /* ... */
     [
-      'snowpack-sass-compiler',
+      '@snowpack/plugin-sass',
       {
-        useAlias:true,
-        aliasPrefix:"@", //could work without this
-        compilerOptions: { outputStyle: 'compressed',includePaths: ['node_modules/bootstrap/dist/css'] },
-      },
-    ],  
+
+      }
+    ]
   ],
   alias: {
-    '@myStyles': './path/to/styles',
+    // '@myStyles': './path/to/styles',
   },
   packageOptions: {
     /* ... */
