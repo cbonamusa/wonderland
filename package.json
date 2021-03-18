@@ -1,4 +1,19 @@
-{
+{  
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbonamusa/wonderland.git"
+  },
+  "keywords": [],
+  "author": "cbonamusa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbonamusa/wonderland/issues"
+  },
+  "homepage": "https://github.com/cbonamusa/wonderland#readme",
+
   "devDependencies": {
     "snowpack": "^3.0.13",
     "snowpack-sass-compiler": "^1.0.6"
