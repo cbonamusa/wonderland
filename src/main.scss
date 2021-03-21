@@ -380,6 +380,7 @@ main { overflow-x: hidden;}
                 min-height: 20px;
                 box-sizing: border-box;
                 -webkit-appearance: none;
+                background: rgb(247, 253, 254);
             }
             .select-w { 
                 &::after {
@@ -394,7 +395,7 @@ main { overflow-x: hidden;}
                     position: absolute;
                     display: inline-block;
                     pointer-events: none;
-                    right: 50px;
+                    right: 48px;
                     padding-top: 10px;
                 }
             }
