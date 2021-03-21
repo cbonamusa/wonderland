@@ -39,6 +39,10 @@ body img {
   max-width: 100%;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 /* ---------------------- HEADER AND NAVBAR -------------------------- */
 .wonderland {
   width: 100%;
@@ -352,6 +356,7 @@ body img {
   height: 300px;
   margin-top: 80px;
   border-radius: 500px;
+  box-sizing: border-box;
   background: rgba(237, 237, 237, 0.906);
 }
 @media (min-width: 767px) {

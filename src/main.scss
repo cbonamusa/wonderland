@@ -23,7 +23,7 @@ body {
     overflow-x: hidden;
     max-width: 100%;
 }
-// main { background: $main-dark;}
+main { overflow-x: hidden;}
 
 /* ---------------------- HEADER AND NAVBAR -------------------------- */
 .wonderland {
@@ -297,6 +297,7 @@ body {
         height: 300px;
         margin-top: 80px;
         border-radius:500px;
+        box-sizing: border-box;
         background:rgba(237, 237, 237, 0.906);
         @include for-phone-landscape-up {
             width:500px; 
