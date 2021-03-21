@@ -201,7 +201,7 @@ main {
   line-height: 1.38;
 }
 .section-drink-content {
-  outline: auto;
+  outline: 1px solid #FFF0E9;
   padding: 25px 15px;
 }
 @media (min-width: 767px) {
@@ -426,7 +426,9 @@ main {
 }
 @media (min-width: 767px) {
   .section-tea article form {
-    position: absolute;
+    position: relative;
+    float: right;
+    margin-right: 30px;
     width: 35%;
     right: 192px;
   }
@@ -445,10 +447,25 @@ main {
   margin-bottom: 16px;
   border: 3px solid #c3f7f8;
   border-radius: 5px;
-  width: 92%;
-}
-.section-tea article form select {
   width: 97%;
+  min-height: 20px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+}
+.section-tea article form .select-w::after {
+  content: "<>";
+  color: #333;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  padding: 0 0 2px;
+  border-bottom: 1px solid #999;
+  position: absolute;
+  display: inline-block;
+  pointer-events: none;
+  right: 50px;
+  padding-top: 10px;
 }
 .section-tea article form input[class=submit] {
   margin-top: 32px;

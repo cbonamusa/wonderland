@@ -167,7 +167,7 @@ main { overflow-x: hidden;}
         }
     }
     &-content {
-        outline: auto;
+        outline: 1px solid $main-light;
         padding: 25px 15px;
         @include for-phone-landscape-up { padding: 140px 0; }
         .colorfill {
@@ -356,7 +356,9 @@ main { overflow-x: hidden;}
             margin-bottom: 20px;
             z-index: 5;
             @include for-phone-landscape-up { 
-                position: absolute;
+                position: relative;
+                float: right;
+                margin-right: 30px;
                 width: 35%;
                 right: $medianil * 12;
             }
@@ -374,9 +376,28 @@ main { overflow-x: hidden;}
                 margin-bottom: $medianil;
                 border: 3px solid $glow-blue;
                 border-radius: 5px;
-                width: 92%;
+                width: 97%;
+                min-height: 20px;
+                box-sizing: border-box;
+                -webkit-appearance: none;
             }
-            select { width: 97%;}
+            .select-w { 
+                &::after {
+                    content: '<>';
+                    color: #333;
+                    -webkit-transform: rotate(90deg);
+                    -moz-transform: rotate(90deg);
+                    -ms-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                    padding: 0 0 2px;
+                    border-bottom: 1px solid #999;
+                    position: absolute;
+                    display: inline-block;
+                    pointer-events: none;
+                    right: 50px;
+                    padding-top: 10px;
+                }
+            }
             input[class="submit"] {
                 margin-top: $medianil*2;
                 background: $main-dark;
