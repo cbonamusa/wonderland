@@ -380,6 +380,7 @@ main { overflow-x: hidden;}
                 min-height: 20px;
                 box-sizing: border-box;
                 background: rgb(247, 253, 254);
+                -webkit-appearance: none;
             }
             .select-w { 
                 &::after {
@@ -397,7 +398,6 @@ main { overflow-x: hidden;}
                     right: 48px;
                     padding-top: 10px;
                 }
-                select { -webkit-appearance: none;}
             }
             input[class="submit"] {
                 margin-top: $medianil*2;

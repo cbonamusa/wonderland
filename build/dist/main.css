@@ -451,6 +451,7 @@ main {
   min-height: 20px;
   box-sizing: border-box;
   background: #f7fdfe;
+  -webkit-appearance: none;
 }
 .section-tea article form .select-w::after {
   content: "<>";
@@ -466,9 +467,6 @@ main {
   pointer-events: none;
   right: 48px;
   padding-top: 10px;
-}
-.section-tea article form .select-w select {
-  -webkit-appearance: none;
 }
 .section-tea article form input[class=submit] {
   margin-top: 32px;
