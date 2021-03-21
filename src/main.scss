@@ -379,7 +379,6 @@ main { overflow-x: hidden;}
                 width: 97%;
                 min-height: 20px;
                 box-sizing: border-box;
-                -webkit-appearance: none;
                 background: rgb(247, 253, 254);
             }
             .select-w { 
@@ -398,6 +397,7 @@ main { overflow-x: hidden;}
                     right: 48px;
                     padding-top: 10px;
                 }
+                select { -webkit-appearance: none;}
             }
             input[class="submit"] {
                 margin-top: $medianil*2;
