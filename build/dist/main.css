@@ -328,12 +328,12 @@ main {
 
 /* ---------------------- SECTION 2: TIME   --------------------------- */
 .section-time {
-  background-image: url("../assets/backgroundTime.jpg");
+  background: url("../assets/backgroundTime.jpg") no-repeat center;
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
   padding-bottom: 80px;
 }
 .section-time-img {
@@ -467,6 +467,24 @@ main {
   pointer-events: none;
   right: 48px;
   padding-top: 10px;
+}
+.section-tea article form .date-w::after {
+  content: "∞";
+  color: #333;
+  font-size: 18px;
+  padding: 0 10px 9px;
+  margin-top: -4px;
+  position: absolute;
+  display: inline-block;
+  pointer-events: none;
+  right: 45px;
+  padding-top: 10px;
+}
+.section-tea article form .date-w input {
+  height: 33px;
+}
+.section-tea article form .date-w input::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }
 .section-tea article form input[class=submit] {
   margin-top: 32px;

@@ -269,12 +269,12 @@ main { overflow-x: hidden;}
 
 /* ---------------------- SECTION 2: TIME   --------------------------- */
 .section-time {
-    background-image: url('../assets/backgroundTime.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url('../assets/backgroundTime.jpg') no-repeat center;
+    background-attachment: fixed; 
     height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
     padding-bottom: 80px;
     &-img {
         margin: auto;
@@ -397,6 +397,24 @@ main { overflow-x: hidden;}
                     pointer-events: none;
                     right: 48px;
                     padding-top: 10px;
+                }
+            }
+            .date-w {
+                &::after {
+                    content: '\221E';
+                    color: #333;
+                    font-size: 18px;
+                    padding: 0 10px 9px;
+                    margin-top: -4px;
+                    position: absolute;
+                    display: inline-block;
+                    pointer-events: none;
+                    right: 45px;
+                    padding-top: 10px;
+                }
+                input{
+                    &::-webkit-calendar-picker-indicator {opacity: 0;}
+                    height: 33px;
                 }
             }
             input[class="submit"] {
